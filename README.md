@@ -24,5 +24,5 @@ To deploy this project run
  hbs
  css
  js
- expressjs nodejs mongoDB
+ expressjs  nodejs  mongoDB
 
