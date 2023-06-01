@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600&family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&family=Tiro+Devanagari+Hindi&display=swap');
+
+        body {
+            font-family: "Lato", sans-serif;
+            /* background-image: url("green1.png"); */
+            background-repeat: no-repeat;
+        }
+
+        .a{
+            float: left;
+            width: 25%;
+            /* background-color:  rgb(108, 233, 116); */
+            margin-top: 10px;
+
+        }
+        .b{
+            float: left;
+            width: 57%;
+            margin-left: 310px;
+            /* background-color: rgb(108, 233, 116); */
+        }
+        .c{
+            float: right;
+            width: 21%;
+            height: 100%;
+            color: black;
+            /* background-color: rgb(108, 233, 116); */
+            margin-top: 3px;
+            border: 2px solid black; 
+            border-radius: 5px; 
+            overflow: none;
+        }
+        .centralheading
+        {
+          text-align: center;
+          font-size: xx-large;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            font-family: Arial;
+            z-index: 5;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            z-index: 5;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+            z-index: 5;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: 'Montserrat', sans-serif; 
+            margin: 0; 
+            z-index: 5;
+        }
+
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+            z-index: 5;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(2, 0, 8, 0.2);
+            z-index: 5;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: rgb(11, 12, 12);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            z-index: 5;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            z-index: 5;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            z-index: 5;
+        }
+
+        .nationalpark{
+          font-family: 'Poppins', sans-serif;
+          font-size: 27px;
+          text-align: center;
+          font-weight: bold;
+        }
+
+        .information{
+          font-family: 'Montserrat', sans-serif;
+          font-size: 17px;
+          text-align: left;
+          padding: 3px;
+        }
+
+.sidenav {
+  height: 100%;
+  width: 300px;
+  position: absolute;
+  z-index: 1;
+  top: 120;
+  left: 10;
+  background-color:  rgb(2, 199, 22);
+  overflow-x: hidden;
+  padding-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+.imageclass1
+        {
+          width:400px;
+          height:300px;
+        }
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(14, 15, 1);
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.active {
+  background-color: green;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: #4cca48;
+  padding-left: 8px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+    .arrow {
+      border: solid rgb(240, 234, 234);
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+    }
+    
+    .arrow1 {
+      border: solid rgb(10, 10, 10);
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+    }
+
+    .down {
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+
+    </style>
+</head>
+<body>
+     {{>navbar}}
+    <div class="navbar"> 
+        <div class="dropdown">
+          <button class="dropbtn">Our mission&nbsp;&nbsp;&nbsp;<i class="arrow down"></i>
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Know IT All</a>
+            <a href="#">FAQ's</a>
+            <a href="#">Your Contribution</a>
+          </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Government Response&nbsp;&nbsp;&nbsp;<i class="arrow down"></i>
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">LAWs & Inforcement</a>
+              <a href="#">Departments</a>
+              <a href="#">AGENDA's & Projects</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Career opportunities&nbsp;&nbsp;&nbsp;<i class="arrow down"></i>
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Government Jobs</a>
+              <a href="#">NGOs/Free Lancing</a> 
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Community&nbsp;&nbsp;&nbsp;<i class="arrow down"></i>
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">JOIN</a>
+              <a href="#">Search</a>
+              <a href="#">Create</a>
+            </div>
+          </div>
+    </div>
+
+    <div class="a">
+        <div class="sidenav">
+            <button class="dropdown-btn">National Park&nbsp;&nbsp;&nbsp;<i class="arrow1 down"></i>
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#">Corbett National Park</a>
+                <a href="#">Kaziranga National Park, Assam</a>
+                <a href="#">Sundarbans National Park, West Bengal</a>
+                <a href="#">Ranthambore National Park, Rajasthan</a>
+                <a href="#">Periyar National Park, Kerala</a>
+                <a href="#">Valley of Flowers National Park, Uttarakhand</a>
+                <a href="#">Hemis National Park, Ladakh</a>
+            </div>
+
+            <button class="dropdown-btn">Wildlife Sancturies&nbsp;&nbsp;&nbsp;<i class="arrow1 down"></i> 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#">Madumalai Sanctuary. Tamil Nadu.</a>
+                <a href="#">Govind Wildlife Sanctuary. Uttarakhand.</a>
+                <a href="#">Gir National Park and Wildlife Sanctuary. Gujarat.</a>
+                <a href="#">Chinnar Wildlife Sanctuary. Kerala.</a>
+                <a href="#">Chilika Lake Bird Sanctuary. Odisha.</a>
+                <a href="#">Bharatpur Bird Sanctuary. Rajasthan.</a>
+                <a href="#">Bhadra Wildlife Sanctuary, Karnataka</a>
+                <a href="#">Bhagwan Mahavir Wildlife Sanctuary, Goa</a>
+            </div>
+
+            <button class="dropdown-btn">Flora(Plants)&nbsp;&nbsp;&nbsp;<i class="arrow1 down"></i>
+                <i class="fa fa-caret-down"></i>
+            </button>
+            
+            <div class="dropdown-container">
+              <button class="dropdown-btn">Flowers
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="#">Tulip</a>
+                <a href="#">Orchids</a>
+                <a href="#">Sunflower</a>
+                <a href="#">Bougainvillea</a>
+                <a href="#">Frangipani</a>
+                <a href="#">Jasmine</a>
+              </div>
+              <button class="dropdown-btn">Fruits
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="Mango.html">Mangoes</a>
+                <a href="Banana.html">Banana</a>
+                <a href="Pineapple.html">Pineapple</a>
+                <a href="Watermelon.html">Watermelon</a>
+                <a href="Muskmelon.html">Muskmelon</a>
+                <a href="Pomegranate.html">Pomegranate</a>
+                <a href="Grapes.html">Grapes</a>
+                <a href="Apple.html">Apple</a>
+                <a href="Orange.html">Orange</a>
+                <a href="Jackfruit.html">Jackfruit</a>
+                <a href="Sapota.html">Sapota (Chiku)</a>
+                <a href="Indian blackberry.html">Indian blackberry (Jamun)</a>
+                <a href="strawberries.html">strawberries</a>
+                <a href="Coconut.html">Coconut</a>
+                <a href="Tamarind.html">Tamarind</a>
+                <a href="Shakarkandi.html">Shakarkandi (Sweet potato)</a>
+                <a href="Amla.html">Amla (Indian gooseberry)</a>
+                <a href="Ber.html">Indian Jujube (Ber)</a>
+                <a href="Lychee .html">Lychee </a> 
+              </div>
+              <button class="dropdown-btn">Herbs & Spices
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="#">Basil</a>
+                <a href="#">Parsley</a>
+                <a href="#">Rosemary</a>
+                <a href="#">Oregano</a>
+                <a href="#">Smoked Paprika</a>
+                <a href="#">Mint</a>
+              </div>
+            </div>
+
+            <button class="dropdown-btn">Fauna(Animals)
+                <i class="fa fa-caret-down"></i>
+            </button> 
+            
+            <div class="dropdown-container">
+              <button class="dropdown-btn">Mountain Region
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="Snow leopard.html">Snow leopard</a>
+                <a href="Tibetan antelope.html">Tibetan antelope</a>
+                <a href="Himalayan tahr.html">Himalayan tahr </a>
+                <a href="Himalayan serow.html">Himalayan serow </a>
+                <a href="Himalayan black bear.html">Himalayan black bear</a>
+                <a href="Musk deer.html">Musk deer </a>
+                <a href="Himalayan wolf.html">Himalayan wolf </a>
+                <a href="Golden eagle.html">Golden eagle</a>
+              </div>
+              <button class="dropdown-btn">Coastal Region
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                   <a href="Olive Ridley sea turtles.html">Olive Ridley sea turtles </a>
+                <a href="Green sea turtles.html">Green sea turtles </a>
+                <a href="Saltwater Crocodile.html">Saltwater Crocodile </a>
+                <a href="Indian Humpback Dolphin.html">Indian Humpback Dolphin </a>
+                <a href="Indian Dugong.html">Indian Dugong </a>
+                <a href="Indian River Terrapin.html">Indian River Terrapin</a>
+                <a href="Indian Ocean Tuna.html">Indian Ocean Tuna </a> 
+                <a href="Spinner Dolphin.html">Spinner Dolphin</a>
+                <a href="Hawksbill sea turtles.html">Hawksbill sea turtles</a> 
+              </div>
+              <button class="dropdown-btn">Deserts
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="Desert fox.html">Desert fox</a> 
+                <a href="Desert cat.html">Desert cat</a> 
+                <a href="Desert hare.html">Desert hare</a> 
+                <a href="Indian spiny-tailed lizard.html">Indian spiny-tailed lizard</a> 
+                <a href="Indian desert jird.html">Indian desert jird</a> 
+                <a href="Monitor lizard.html">Monitor lizard</a> 
+                <a href="Russell's viper.html">Russell's viper</a>  
+                <a href="Indian pangolin.html">Indian pangolin</a> 
+                <a href="Great Indian bustard.html">Great Indian bustard</a> 
+              </div>
+              <button class="dropdown-btn">Forest
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="Asian elephant.html">Asian elephant</a> 
+                <a href="Indian rhinoceros.html">Indian rhinoceros</a> 
+                <a href="Bengal tiger.html">Bengal tiger</a> 
+                <a href="Indian wolf.html">Indian wolf</a> 
+                <a href="Blackbuck.html">Blackbuck</a> 
+                <a href="Nilgai.html">Nilgai (Bluebull)</a> 
+                <a href="Indian hare.html">Indian hare</a> 
+                <a href="Indian Gazelle.html">Indian Gazelle (Chinkara)</a>  
+                <a href="Indian pangolin.html">Indian pangolin</a> 
+                <a href="Indian gray mongoose.html">Indian gray mongoose</a> 
+                <a href="Indian striped hyena.html">Indian striped hyena</a> 
+                <a href="Small Indian civet.html">Small Indian civet</a> 
+                <a href="Indian wild boar.html">Indian wild boar</a> 
+                <a href="Sambar deer.html">Sambar deer</a> 
+                <a href="Chital.html">Spotted deer (Chital)</a> 
+                <a href="Blackbuck.html">Indian antelope (Blackbuck)</a>
+              </div>
+            </div> 
+        </div>
+    </div> 
+    <div class="b">
+      <h1 class="centralheading"><centre>The National Parks of India</centre></h1>
+        <p>A national park is an area of protected land that has been set aside by the government for the preservation of its natural and cultural resources. These parks are often home to unique flora and fauna, geological formations, and important historical and cultural sites.It gives the an opportunity  to experience the beauty and diversity of the natural world while also learning about the history and culture of the area.It is also a means for us to teach the future generation about the delicate balance between nature and humans and the need to maintain it.
+        </p>
+
+        <p>
+        he benefits of national parks are numerous. They provide important habitat for wildlife, help to protect biodiversity, and preserve unique geological features. National parks also offer important recreational opportunities, promoting physical activity, stress relief, and mental well-being. Additionally, national parks can have a positive economic impact on surrounding communities, providing jobs and increasing tourism.
+        </p>
+
+        <p>
+        There are various wide range of fun activities which can be done at a National Park starting from hiking ,camping ,fishing, boating, and wildlife phtography etc. also there are Educational Programs runned by these National Parks such as Guided Tours to explain the visitors the importance and history of the place.It acts as a vital resource for conducting research and study for the environmentalists to understand the various ways in which they interact with one another acting as a live laboratories to study the affects on the wildlife due to the change in climate and historical 
+        </p>
+        <!-- <img src="nationalpark1.jpeg" class="imageclass1"> -->
+        <p>
+        They are  managed by a national park service, which is responsible for maintaining the park's natural and cultural resources, enforcing regulations to protect those resources, and providing educational opportunities for visitors. India's first national park was established in 1936 in Uttarakhand by the name of  Hailey National Parkwhich is now known as Jim Corbett National Park  after Jim Corbett, a famous British-Indian hunter and conservationist who played a key role in the establishment of the park.THANKFULLY, Today due to the efforts of the people and the government there are a total of 61 National Parks out of which few are as listed below -
+
+        </p>
+
+        <ul>
+            <li>Anshi National Park, Karnataka</li>
+            <li>Balphakram National Park, Meghalaya</li>
+            <li>Bandhavgarh National Park, Madhya Pradesh</li>
+            <li>Bandipur National Park, Karnataka</li>
+            <li>Bannerghatta National Park, Karnataka</li>
+            <li>Betla National Park, Jharkhand</li>
+            <li>Bhitarkanika National Park, Odisha</li>
+            <li>Blackbuck National Park, Gujarat</li>
+            <li>Bori Wildlife Sanctuary, Madhya Pradesh</li>
+            <li>Chandoli National Park, Maharashtra</li>
+            <li>Desert National Park, Rajasthan</li>
+            <li>Dibru-Saikhowa National Park, Assam</li>
+            <li>Dudhwa National Park, Uttar Pradesh</li>
+            <li>Eravikulam National Park, Kerala</li>
+            <li>Galathea National Park, Andaman and Nicobar Islands</li>
+            <li>Gangotri National Park, Uttarakhand</li>
+            <li>Gir National Park, Gujarat</li>
+            <li>Gorumara National Park, West Bengal</li>
+            <li>Govind Pashu Vihar National Park, Uttarakhand</li>
+            <li>Great Himalayan National Park, Himachal Pradesh</li>
+            <li>Guindy National Park, Tamil Nadu</li>
+            <li>Gulf of Mannar Marine National Park, Tamil Nadu</li>
+            <li>Hemis National Park, Jammu and Kashmir</li>
+            <li>Indira Gandhi Wildlife Sanctuary and National Park, Tamil Nadu</li>
+            <!-- <li>Indravati National Park, Chhattisgarh</li>
+            <li>Jim Corbett National Park, Uttarakhand</li>
+            <li>Kalesar National Park, Haryana</li> 
+            <li>Kanha National Park, Madhya Pradesh</li>
+            <li>Kanger Ghati National Park, Chhattisgarh</li>
+            <li>Keibul Lamjao National Park, Manipur</li>
+            <li>Khangchendzonga National Park, Sikkim</li>
+            <li>Kishtwar National Park, Jammu and Kashmir</li>
+            <li>Kudremukh National Park, Karnataka</li>
+            <li>Madhav National Park, Madhya Pradesh</li>
+            <li>Mahatma Gandhi Marine National Park, Andaman and Nicobar Islands</li>
+            <li>Mahavir Harina Vanasthali National Park, Telangana</li>
+            <li>Manas National Park, Assam</li>
+            <li>Mandla Plant Fossils National Park, Madhya Pradesh</li>
+            <li>Marine National Park, Gulf of Kutch, Gujarat</li>
+            <li>Mathikettan Shola National Park, Kerala</li>
+            <li>Middle Button Island National Park, Andaman and Nicobar Islands</li>
+            <li>Mollem National Park, Goa</li>
+            <li>Mouling National Park, Arunachal Pradesh</li>
+            <li>Mount Abu Wildlife Sanctuary, Rajasthan</li>
+            <li>Mudumalai National Park, Tamil Nadu</li>
+            <li>Mukundra Hills National Park, Rajasthan</li>
+            <li>Nameri National Park, Assam</li>
+            <li>Nanda Devi National Park, Uttarakhand</li>
+            <li>Navegaon National Park, Maharashtra</li>
+            <li>Neora Valley National Park, West Bengal</li>
+            <li>Nokrek National Park, Meghalaya</li>
+            <li>North Button Island National Park, Andaman and Nicobar Islands</li>
+            <li>Orang National Park, Assam</li>
+            <li>Palamau Tiger Reserve, Jharkhand</li>
+            <li>Panna National Park, Madhya Pradesh</li>
+            <li>Pench National Park, Madhya Pradesh and Maharashtra</li>
+            <li>Periyar National Park, Kerala</li>
+            <li>Phawngpui Blue Mountain National Park, Mizoram</li>
+            <li>Pin Valley National Park, Himachal Pradesh</li>
+            <li>Rajaji National Park, Uttarakhand</li>
+            <li>Rani Jhansi Marine National Park</li> -->
+        </ul>
+    </div>
+    <div class="c">
+      <img src="tiger1.png" class="tiger" border="2" width="301" height="200">
+      <div class="nationalpark">National Park</div>
+      <div class="information">
+        Created : 20 December, 2003 <br>
+        Last Updated : 18 March, 2023
+    </div>
+    </div>
+      {{>footer}}
+    <script>
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+        
+    </script>
+</body>
+</html>

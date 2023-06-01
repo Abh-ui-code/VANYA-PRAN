@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/faq.css">
+    <title>FAQ's</title>
+<head>
+      {{!-- <style type="text/css">
+      body{
+        background:#b19a2c80;
+        padding-top: 20px;
+        font-family: monospace;
+      }
+      .header{
+        border-radius: 20px 20px 0px 0px;
+        padding: 10px 0px;
+        background: #800029;
+        color: #fff;
+        width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+      .faq-item{
+        margin-bottom: 40px;
+        margin-top: 40px;
+      }
+      .faq-body{
+        display: none;
+        margin-top: 30px;
+      }
+      .faq-wrapper{
+        width: 75%;
+        margin: 0 auto;
+      }
+      .faq-inner{
+        padding: 30px;
+        background: aliceblue;
+      }
+      .faq-plus{
+        float: right;
+        font-size: 1.4em;
+        line-height: 1em;
+        cursor: pointer;
+      }
+      hr{
+        background-color: #9b9b9b;
+      }
+    </style> --}}
+</head>
+<body>
+     {{>navbar}}
+     
+
+
+  {{!-- <body>
+    <div class="container">
+      <div class="row">
+        <div class="faq-wrapper">
+          <div class="header">
+            <h1>FAQs</h1>
+          </div>
+          <div class="faq-inner">
+            <div class="faq-item">
+              <h3>
+                What is an FAQ page ?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              </div>
+            </div>
+            <hr>
+            <div class="faq-item">
+              <h3>
+                What is an FAQ page ?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              </div>
+            </div>
+            <hr>
+            <div class="faq-item">
+              <h3>
+                What is an FAQ page ?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              </div>
+            </div>
+            <hr>
+            <div class="faq-item">
+              <h3>
+                What is an FAQ page ?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              </div>
+            </div>
+            <hr>
+            <div class="faq-item">
+              <h3>
+                What is an FAQ page ?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> --}}
+    <div class="containerFluid">
+  <h2>Frequently Asked Questions(FAQs)</h2>
+  <div class="accordion">
+    <div class="icon"></div>
+    <h5>Why Should We Require Wild Life Department ?</h5>
+  </div>
+  <div class="panel">
+    <p style="    color: #cff080;">
+     Forest and animal related government departments require a range of resources, expertise, and collaboration to effectively manage and protect forests and wildlife for present and future generations.
+    </p>
+  </div>
+
+  <div class="accordion">
+    <div class="icon"></div>
+    <h5>LAW :Why do We Require Animal-related laws ?</h5>
+  </div>
+  <div class="panel">
+    <p style="    color: #cff080;;">
+      Laws related to wildlife help to protect endangered species from extinction. These laws help to regulate hunting, poaching, and trading of wildlife, which can pose a significant threat to the survival of certain species.
+    </p>
+  </div>
+
+  <div class="accordion">
+    <div class="icon"></div>
+    <h5>What Cases are applicable if You See a Crime being Commited?</h5>
+  </div>
+  <div class="panel">
+    <p style="    color: #cff080;;">
+      Bollywood actor Salman Khan was accused of hunting and killing two blackbucks in 1998 in Rajasthan. He was convicted under the Wildlife Protection Act in 2018 and sentenced to five years in prison, but the sentence was later suspended.
+    </p>
+  </div>
+
+  <div class="accordion">
+    <div class="icon"></div>
+    <h5>Why do we use it?</h5>
+  </div>
+  <div class="panel">
+    <p  style="   color: #cff080;;">
+      Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem Ipsum has been the industry's standard dummy text ever
+      since the 1500s, when an unknown printer took a galley of type and
+      scrambled it to make a type specimen book. It has survived not only
+      five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged.
+    </p>
+  </div>
+</div>
+     {{>footer}}
+    <script type="text/javascript">
+      var acc = document.getElementsByClassName("accordion");
+var i;
+var len = acc.length;
+for (i = 0; i < len; i++) {
+  acc[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+
+    </script>
+  </body>
+
+</html>
+    {{!-- $(".faq-plus").on('click',function(){
+        $(this).parent().parent().find('.faq-body').slideToggle();
+      }); --}}

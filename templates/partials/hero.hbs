@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/partials.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</head>
+<body>
+    <div class="hero">
+         
+                {{!-- <img src="/img/wildlife.png" width="230px" height="253px" alt="wildlife"> --}}
+                
+          
+        <div class="hero-inner">
+            <div class="content">
+                
+                <h1 style="font-family: emoji;">Wildlife Protection</h1>
+                <p id="wildlife_change" style="margin-right:24rem; margin-right: 47rem;
+    font-family: emoji;
+    font-weight: bolder;     font-size: 22px;">Wildlife protection refers to the conservation and preservation of animal species and their habitats. It involves a variety of measures such as enacting and enforcing laws and policies, setting aside protected areas, and controlling human activities that harm wildlife. The goal of wildlife protection is to maintain healthy and diverse ecosystems and prevent species from becoming endangered or extinct. Effective wildlife protection requires the cooperation of governments, communities, and individuals, as well as international cooperation to address issues such as illegal wildlife trade and habitat loss due to global economic and development trends.</p>
+                
+               
+            </div>
+                {{!-- <span class="next-img">
+                    
+                <img class="new_img" id="fade1" src="/img/wildlife.png" width="230px" height="253px" alt="wildlife">
+                <img  class="new_img" id="fade1" src="/img/wildlife3.png" width="230px" height="253px" alt="wildlife">
+                <img  class="new_img" id="fade1" src="/img/wildlife3.png" width="230px" height="253px" alt="wildlife">
+           
+                </span> --}}
+                
+                
+            
+{{!--             
+            <div class="img" id="fade">
+                <img src="/img/wildlife.png" width="371px" height="350px" alt="wildlife">
+                
+            </div>
+             <div class="img" id="fade">
+                <img src="/img/wildlife3.png" width="371px" height="350px" alt="wildlife">
+                
+            </div>
+            <div class="img" >
+                <img src="/img/wildlife2.png" width="371px" height="350px" alt="wildlife">
+                
+            </div> --}}
+           
+            
+
+            
+        </div>
+      
+           
+    </div>
+    <script>
+
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("img");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length){
+            myIndex = 1
+        }    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 2800);
+    }
+    </script>
+</body>
+</html>
